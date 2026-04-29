@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Dutch Medical Centre</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- swiper -->
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body class="font-body bg-white text-black">
+    <!-- ================= HEADER ================= -->
+    <header class="w-full bg-white">
+      <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-[88px] flex items-center justify-between">
+          <!-- LOGO IMAGE HERE -->
+          <a href="#" class="flex items-center">
+            <img
+              src="images/logo.svg"
+              alt="Royal Dutch Medical Centre"
+              class="w-[150px] sm:w-[180px] md:w-[250px] h-auto object-contain"
+            />
+          </a>
+
+          <!-- BOOK NOW BUTTON -->
+          <a
+            href="#book-now"
+            class="bg-[#571248] text-white font-body text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.5px] px-6 sm:px-9 py-2.5 rounded-full transition-all duration-300 hover:bg-[#421038] hover:scale-[1.03]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main>
+      <section
+        id="book-now"
+        class="relative w-full overflow-hidden mb-5 md:bg-transparent"
+      >
+        <!-- Desktop Banner Background -->
+        <div
+          class="hidden md:block absolute inset-0 bg-cover bg-left bg-no-repeat"
+          style="background-image: url(&quot;images/banner.jpg&quot;)"
+        ></div>
+
+        <!-- Mobile Image -->
+        <div class="block md:hidden w-full">
+          <img
+            src="images/banner.jpg"
+            alt="Royal Dutch Consultation"
+            class="w-full h-[280px] sm:h-[340px] object-cover object-left"
+          />
+        </div>
+
+        <!-- Content Wrapper -->
+        <div
+          class="relative z-20 w-full px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[80px] 2xl:px-[110px]"
+        >
+          <div
+            class="min-h-auto md:min-h-[460px] lg:min-h-[560px] flex items-center justify-end py-8 md:py-12"
+          >
+            <!-- Form Box -->
+            <div
+              class="w-full md:w-[430px] lg:w-[500px] xl:w-[500px] bg-[#571248]/95 md:bg-[#571248]/60 border border-white/20 rounded-[24px] px-5 sm:px-7 lg:px-9 py-6 sm:py-7 lg:py-9 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-md"
+            >
+              <!-- Form Heading -->
+              <h2
+                class="font-heading text-white text-[20px] sm:text-[22px] lg:text-[26px] font-bold uppercase tracking-[0.3px]"
+              >
+                Book Your Consultation
+              </h2>
+
+              <div class="w-full h-[1px] bg-white/80 mt-3 mb-7"></div>
+
+              <!-- Form -->
+              <form class="space-y-7">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                  <!-- Name -->
+                  <div>
+                    <label
+                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Your Name"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div>
+                    <label
+                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                    >
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Enter Your Phone No"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                    />
+                  </div>
+
+                  <!-- Service -->
+                  <div>
+                    <label
+                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                    >
+                      Service
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Your Service"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div>
+                    <label
+                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter Your Email"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                    />
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <button
+                  type="submit"
+                  class="w-full sm:w-[190px] h-[42px] rounded-full border border-white/20 bg-white/5 text-white text-[13px] font-bold uppercase tracking-[1px] transition-all duration-300 hover:bg-white hover:text-[#571248]"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= NATURAL TREATMENTS SECTION ================= -->
+      <section class="w-full bg-white py-14 sm:py-16 lg:py-20 overflow-hidden">
+        <!-- Heading -->
+        <div class="relative text-center px-4 mb-12 sm:mb-16">
+          <!-- Background Text -->
+          <h3
+            class="absolute inset-x-0 -top-10 sm:-top-14 font-heading text-[70px] sm:text-[100px] lg:text-[140px] italic text-gray-100/80 leading-none pointer-events-none select-none"
+          >
+            Features
+          </h3>
+
+          <p
+            class="relative z-10 font-body text-[#D6B981] text-[16px] sm:text-[18px] font-semibold mb-3"
+          >
+            What We Do
+          </p>
+
+          <h2
+            class="relative z-10 font-heading text-[#222222] text-[28px] sm:text-[36px] lg:text-[42px] font-medium uppercase tracking-[0.5px]"
+          >
+            We Provide Natural Treatments
+          </h2>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-14">
+            <!-- Item 1 -->
+            <div class="border-t border-gray-200 pt-8">
+              <div class="flex items-center gap-6">
+                <!-- ICON IMAGE HERE -->
+                <div
+                  class="w-[92px] h-[92px] shrink-0 rounded-full bg-[#571248] flex items-center justify-center"
+                >
+                  <span
+                    class="block w-[50px] h-[50px] bg-[#FFD700]"
+                    style="
+                      --icon: url(images/clinical-treatements.png);
+                      -webkit-mask: var(--icon) center / contain no-repeat;
+                      mask: var(--icon) center / contain no-repeat;
+                    "
+                  ></span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-body text-[#2b2b2b] text-[23px] sm:text-[26px] font-medium leading-tight"
+                  >
+                    Clinical Treatments
+                  </h3>
+                  <p
+                    class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
+                  >
+                    Organic Modern Treatments
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="border-t border-gray-200 pt-8">
+              <div class="flex items-center gap-6">
+                <!-- ICON IMAGE HERE -->
+                <div
+                  class="w-[92px] h-[92px] shrink-0 rounded-full bg-[#571248] flex items-center justify-center"
+                >
+                  <span
+                    class="block w-[50px] h-[50px] bg-[#FFD700]"
+                    style="
+                      --icon: url(images/toxins-new.svg);
+                      -webkit-mask: var(--icon) center / contain no-repeat;
+                      mask: var(--icon) center / contain no-repeat;
+                    "
+                  ></span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-body text-[#2b2b2b] text-[23px] sm:text-[26px] font-medium leading-tight"
+                  >
+                    Toxins Free
+                  </h3>
+                  <p
+                    class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
+                  >
+                    Organic Modern Treatments
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="border-t border-gray-200 pt-8">
+              <div class="flex items-center gap-6">
+                <!-- ICON IMAGE HERE -->
+                <div
+                  class="w-[92px] h-[92px] shrink-0 rounded-full bg-[#571248] flex items-center justify-center"
+                >
+                  <span
+                    class="block w-[50px] h-[50px] bg-[#FFD700]"
+                    style="
+                      --icon: url(images/Frame.svg);
+                      -webkit-mask: var(--icon) center / contain no-repeat;
+                      mask: var(--icon) center / contain no-repeat;
+                    "
+                  ></span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-body text-[#2b2b2b] text-[23px] sm:text-[26px] font-medium leading-tight"
+                  >
+                    Organic Products
+                  </h3>
+                  <p
+                    class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
+                  >
+                    Organic Modern Treatments
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="border-t border-gray-200 pt-8">
+              <div class="flex items-center gap-6">
+                <!-- ICON IMAGE HERE -->
+                <div
+                  class="w-[92px] h-[92px] shrink-0 rounded-full bg-[#571248] flex items-center justify-center"
+                >
+                  <span
+                    class="block w-[50px] h-[50px] bg-[#FFD700]"
+                    style="
+                      --icon: url(images/No-Side-effects.svg);
+                      -webkit-mask: var(--icon) center / contain no-repeat;
+                      mask: var(--icon) center / contain no-repeat;
+                    "
+                  ></span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-body text-[#2b2b2b] text-[23px] sm:text-[26px] font-medium leading-tight"
+                  >
+                    No Side Affects
+                  </h3>
+                  <p
+                    class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
+                  >
+                    Organic Modern Treatments
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SPECIALITIES SECTION ================= -->
+      <section class="w-full bg-white py-14 sm:py-16 lg:py-20">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 items-top gap-10 lg:gap-20"
+          >
+            <!-- Left Content -->
+            <div class="order-1">
+              <p
+                class="font-heading text-[#333333] text-[16px] sm:text-[18px] md:text-[26px] uppercase font-medium tracking-[0.3px]"
+              >
+                Our Specialties
+              </p>
+
+              <div
+                class="w-full max-w-[280px] h-[1px] bg-[#D6B981] mt-4 mb-6"
+              ></div>
+
+              <p
+                class="font-body text-[#333333] text-[15px] sm:text-[16px] leading-[1.8] font-semibold max-w-[500px]"
+              >
+                We specialize in advanced dermatology and aesthetic solutions
+                that combine science-backed protocols with a holistic approach
+                to beauty and skin health.
+              </p>
+            </div>
+
+            <!-- Right Image -->
+            <div class="order-2">
+              <div
+                class="relative w-full overflow-hidden rounded-none shadow-[0_18px_45px_rgba(0,0,0,0.08)]"
+              >
+                <img
+                  src="images/laser.png"
+                  alt="Advanced Dermatology Treatment"
+                  class="w-full h-[260px] sm:h-[340px] lg:h-[330px] xl:h-[360px] object-cover object-center transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DERMATOLOGY SERVICES SLIDER ================= -->
+      <section class="rd-simple-services-section">
+        <div class="rd-simple-container">
+          <div class="rd-simple-heading-wrap">
+            <h2 class="rd-simple-heading">
+              Dermatology and Aesthetic Services
+            </h2>
+          </div>
+
+          <div class="rd-simple-slider-wrap">
+            <div class="swiper rdSimpleServicesSwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/skin-lightening.png"
+                      alt="Skin Lightening"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Skin Lightening</h3>
+                    <p>Treatments for brightening uneven skin tone.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/facials.png"
+                      alt="Facials Hydrofacial"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Facials <br />(Hydrofacial)</h3>
+                    <p>Skin-cleansing and hydrating treatments.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/facials-luxe.png"
+                      alt="Facials Luxe"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Facials Luxe</h3>
+                    <p>Premium cleansing and deep hydration treatment.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/scalp.png"
+                      alt="Scalp Micropigmentation"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Scalp Micropigmentation</h3>
+                    <p>A non-surgical hair loss solution using pigment.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/fat-freezing.png"
+                      alt="Cryolipolysis Fat Freezing"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Cryolipolysis Fat Freezing</h3>
+                    <p>Non-invasive fat reduction using cold technology.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/scar-coverup.png"
+                      alt="Scar Coverup"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Scar Coverup</h3>
+                    <p>Pigment-based concealment for visible scars.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/laser-hair.png"
+                      alt="Laser Hair"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Laser Hair</h3>
+                    <p>Laser treatment that targets unwanted hair follicles.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/laser-rejuvenation.png"
+                      alt="Laser Rejuvenation"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Laser Rejuvenation</h3>
+                    <p>Skin-resurfacing treatment for aging and dull skin.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/mesotherapy.png"
+                      alt="Mesotherapy"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Mesotherapy</h3>
+                    <p>
+                      Boost hydration, glow, and youthfulness with expert
+                      Mesotherapy.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 10 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/dermapen.png"
+                      alt="Dermapen"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Dermapen</h3>
+                    <p>
+                      Microneedling treatment that supports collagen renewal.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 11 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/general-facial.png"
+                      alt="General Facial"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>General Facial</h3>
+                    <p>Essential skin cleansing and rejuvenation treatment.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 12 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/acne-facial.png"
+                      alt="Acne Facial"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Acne Facial</h3>
+                    <p>
+                      Treatment targeting acne-causing bacteria for clear skin.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 13 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/bb-glow.png"
+                      alt="BB Glow Facial"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>BB Glow Facial</h3>
+                    <p>Semi-permanent glow treatment for radiant complexion.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 14 -->
+                <div class="swiper-slide">
+                  <div class="rd-simple-card">
+                    <img
+                      src="images/chemical-peeling.png"
+                      alt="Chemical Peeling"
+                      class="rd-simple-icon-img"
+                    />
+                    <h3>Chemical Peeling</h3>
+                    <p>
+                      Exfoliating treatment that removes damaged skin layers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Outside Arrows -->
+            <button
+              class="rd-simple-nav rd-simple-prev"
+              aria-label="Previous slide"
+            ></button>
+            <button
+              class="rd-simple-nav rd-simple-next"
+              aria-label="Next slide"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LEGACY SECTION ================= -->
+      <section class="w-full bg-white py-9 sm:py-12 lg:py-14">
+        <div
+          class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-7 px-4 sm:px-6 md:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-8"
+        >
+          <!-- Left Image -->
+          <div class="w-full overflow-hidden">
+            <img
+              src="images/clinic-interior.jpg"
+              alt="Royal Dutch Clinic Interior"
+              class="block h-[220px] w-full object-cover object-center sm:h-[280px] md:h-[320px] lg:h-[355px]"
+            />
+          </div>
+
+          <!-- Right Content -->
+          <div class="w-full">
+            <h2
+              class="max-w-[520px] font-['Cinzel'] text-[17px] font-bold uppercase leading-[1.25] text-[#333333] sm:text-[19px] lg:text-[21px] lg:leading-[1.15]"
+            >
+              A Legacy of Excellence in Dermatology &amp; Aesthetics
+            </h2>
+
+            <div class="my-5 h-[1px] w-full bg-[#D6B981] sm:my-6 lg:my-7"></div>
+
+            <p
+              class="max-w-[560px] font-['Montserrat'] text-[13.5px] font-medium leading-[1.75] text-[#333333] sm:text-[15px] lg:text-[16px] lg:font-semibold"
+            >
+              Established in Ras Al Khaimah, United Arab Emirates, Royal Dutch
+              Clinic has earned a reputation as a premier destination for
+              advanced dermatology and aesthetic medicine. Founded by seasoned
+              Dutch professionals with a vision to redefine clinical care
+              through European precision and innovation, Royal Dutch Clinic has
+              grown into a trusted brand that delivers personalized beauty and
+              wellness solutions with uncompromising quality.
+            </p>
+
+            <a
+              href="#book-now"
+              class="mt-5 inline-flex h-[42px] min-w-[180px] items-center justify-center rounded-full bg-[#571248] px-8 font-['Montserrat'] text-[14px] font-bold uppercase tracking-[0.4px] text-white shadow-[0_16px_32px_rgba(87,18,72,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#421038] hover:shadow-[0_20px_42px_rgba(87,18,72,0.30)]"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIAL SECTION WITHOUT SWIPER ================= -->
+      <section class="rdn-testimonial-section">
+        <!-- Heading -->
+        <div class="rdn-testimonial-heading-wrap">
+          <h2 class="rdn-testimonial-heading">Testimonial</h2>
+          <span class="rdn-testimonial-line"></span>
+        </div>
+
+        <!-- Carousel -->
+        <div class="rdn-testimonial-carousel">
+          <!-- Previous Button -->
+          <button
+            class="rdn-testimonial-arrow rdn-testimonial-prev"
+            type="button"
+            aria-label="Previous testimonial"
+          ></button>
+
+          <!-- Slides -->
+          <div class="rdn-testimonial-track">
+            <!-- Slide 1 -->
+            <div class="rdn-testimonial-card rdn-active">
+              <p>
+                Royal Dutch Medical Centre gave me a comfortable and
+                professional experience. The consultation was clear, the
+                treatment was handled with care, and I felt confident throughout
+                my visit.
+              </p>
+
+              <div class="rdn-testimonial-user">
+                <div class="rdn-testimonial-avatar">AM</div>
+                <h3>Amina Mohammed, Dubai</h3>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="rdn-testimonial-card">
+              <p>
+                I visited for facial and skin rejuvenation services. The team
+                explained every step patiently, and the clinic felt premium,
+                hygienic, and very welcoming.
+              </p>
+
+              <div class="rdn-testimonial-user">
+                <div class="rdn-testimonial-avatar">SK</div>
+                <h3>Sara Khan, Dubai Marina</h3>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="rdn-testimonial-card">
+              <p>
+                The dermatology team at Royal Dutch Medical Centre was very
+                knowledgeable. I appreciated the personalized approach and the
+                calm environment during my treatment.
+              </p>
+
+              <div class="rdn-testimonial-user">
+                <div class="rdn-testimonial-avatar">FA</div>
+                <h3>Fatima Al Nuaimi, Jumeirah</h3>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="rdn-testimonial-card">
+              <p>
+                From booking to consultation, everything was smooth and
+                professional. The staff made me feel comfortable, and the
+                service quality was excellent.
+              </p>
+
+              <div class="rdn-testimonial-user">
+                <div class="rdn-testimonial-avatar">NR</div>
+                <h3>Nadia Rahman, Downtown Dubai</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next Button -->
+          <button
+            class="rdn-testimonial-arrow rdn-testimonial-next"
+            type="button"
+            aria-label="Next testimonial"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ================= MAP + FORM SECTION ================= -->
+<section class="w-full bg-white py-10 sm:py-12 lg:py-14 overflow-hidden">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center gap-10 lg:gap-20">
+
+      <!-- ================= MAP ================= -->
+      <div class="w-full">
+        <div class="w-full max-w-[560px] mx-auto lg:mx-0 overflow-hidden rounded-[18px] shadow-[0_14px_36px_rgba(0,0,0,0.13)] border border-black/5">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3414.617655167945!2d55.9685669!3d25.791533899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef6775518dd0ed9%3A0x9143971a2cb06457!2sRoyal%20Dutch%20Clinic!5e1!3m2!1sen!2sin!4v1777466592975!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="block w-full h-[260px] sm:h-[310px] lg:h-[355px]"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- ================= FORM ================= -->
+      <div class="w-full">
+        <div class="w-full max-w-[430px] mx-auto lg:ml-auto rounded-[28px] bg-white px-5 sm:px-7 py-7 sm:py-8 shadow-[0_16px_45px_rgba(0,0,0,0.13)]">
+
+          <!-- Heading -->
+          <h2 class="font-['Cinzel'] text-[#1f1f1f] text-[19px] sm:text-[21px] font-bold uppercase tracking-[0.2px]">
+            Book Your Consultation
+          </h2>
+
+          <!-- Form -->
+          <form class="mt-8 space-y-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6">
+
+              <!-- Name -->
+              <div>
+                <label class="block font-['Cinzel'] text-[#1f1f1f] text-[14px] font-bold uppercase mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label class="block font-['Cinzel'] text-[#1f1f1f] text-[14px] font-bold uppercase mb-2">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Enter Your Phone No"
+                  class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                />
+              </div>
+
+              <!-- Service -->
+              <div>
+                <label class="block font-['Cinzel'] text-[#1f1f1f] text-[14px] font-bold uppercase mb-2">
+                  Service
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Service"
+                  class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="block font-['Cinzel'] text-[#1f1f1f] text-[14px] font-bold uppercase mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                />
+              </div>
+
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="w-full sm:w-[190px] h-[42px] rounded-full bg-[#571248] font-['Montserrat'] text-white text-[13px] font-bold uppercase tracking-[1px] shadow-[0_12px_26px_rgba(87,18,72,0.24)] transition-all duration-300 hover:bg-[#421038] hover:-translate-y-1"
+            >
+              Submit
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full bg-[#571248] text-white">
+      <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="min-h-[48px] py-3 flex flex-col md:flex-row items-center justify-center text-center gap-3 md:gap-0"
+        >
+          <p
+            class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
+          >
+            © Copyright Royaldutch Medical Centre 2025
+          </p>
+
+          <span
+            class="hidden md:block h-8 w-[1px] bg-white/25 mx-4 lg:mx-6"
+          ></span>
+
+          <p
+            class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
+          >
+            All Rights Reserved
+          </p>
+
+          <span
+            class="hidden md:block h-8 w-[1px] bg-white/25 mx-4 lg:mx-6"
+          ></span>
+
+          <p
+            class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
+          >
+            Designed and Developed by Ayati Works
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".rdSimpleServicesSwiper", {
+          slidesPerView: 1.15,
+          spaceBetween: 14,
+          loop: true,
+          speed: 750,
+          grabCursor: true,
+
+          autoplay: {
+            delay: 1900,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+
+          navigation: {
+            nextEl: ".rd-simple-next",
+            prevEl: ".rd-simple-prev",
+          },
+
+          breakpoints: {
+            480: {
+              slidesPerView: 1.35,
+              spaceBetween: 16,
+            },
+            640: {
+              slidesPerView: 2.2,
+              spaceBetween: 18,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 22,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+            },
+          },
+        });
+      });
+    </script>
+
+    <!-- Testimonial js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".rdn-testimonial-card");
+        const prevBtn = document.querySelector(".rdn-testimonial-prev");
+        const nextBtn = document.querySelector(".rdn-testimonial-next");
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          cards.forEach((card) => {
+            card.classList.remove("rdn-active");
+          });
+
+          cards[index].classList.add("rdn-active");
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % cards.length;
+          showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          showSlide(currentIndex);
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", nextSlide);
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener("click", prevSlide);
+        }
+
+        showSlide(currentIndex);
+      });
+    </script>
+
+    <!-- Animation script -->
+     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const animatedElements = document.querySelectorAll(
+      ".fade-in, .fade-up, .fade-left, .fade-right, .fade-down"
+    );
+
+    const observer = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-animation");
+
+            // Run animation only one time
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    animatedElements.forEach(function (element) {
+      observer.observe(element);
+    });
+  });
+</script>
+  </body>
+</html>
