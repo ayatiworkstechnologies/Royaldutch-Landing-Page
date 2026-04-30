@@ -53,128 +53,140 @@
     <!-- PAGE CONTENT -->
     <main>
       <section
-        id="book-now"
-        class="relative w-full overflow-hidden mb-5 md:bg-transparent"
+  id="book-now"
+  class="relative w-full overflow-hidden mb-5 md:bg-transparent"
+>
+  <!-- Desktop Banner Background -->
+  <div
+    class="hidden md:block absolute inset-0 bg-cover bg-left bg-no-repeat"
+    style="background-image: url('images/banner.jpg')"
+  ></div>
+
+  <!-- Mobile Image -->
+  <div class="block md:hidden w-full">
+    <img
+      src="images/banner.jpg"
+      alt="Royal Dutch Consultation"
+      class="w-full h-[280px] sm:h-[340px] object-cover object-left"
+    />
+  </div>
+
+  <!-- Content Wrapper -->
+  <div
+    class="relative z-20 w-full px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[80px] 2xl:px-[110px]"
+  >
+    <div
+      class="min-h-auto md:min-h-[460px] lg:min-h-[560px] flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-10 py-8 md:py-12"
+    >
+      <!-- Left Content -->
+      <div
+        class="w-full md:w-[48%] lg:w-[50%] max-w-[520px] text-center md:text-left text-[#571248] md:text-white"
       >
-        <!-- Desktop Banner Background -->
-        <div
-          class="hidden md:block absolute inset-0 bg-cover bg-left bg-no-repeat"
-          style="background-image: url(&quot;images/banner.jpg&quot;)"
-        ></div>
-
-        <!-- Mobile Image -->
-        <div class="block md:hidden w-full">
-          <img
-            src="images/banner.jpg"
-            alt="Royal Dutch Consultation"
-            class="w-full h-[280px] sm:h-[340px] object-cover object-left"
-          />
-        </div>
-
-        <!-- Content Wrapper -->
-        <div
-          class="relative z-20 w-full px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[80px] 2xl:px-[110px]"
+        <h1
+          class="font-heading text-[28px] sm:text-[34px] lg:text-[46px] xl:text-[54px] font-bold uppercase leading-[1.15] tracking-[0.5px] md:drop-shadow-[0_8px_28px_rgba(0,0,0,0.35)]"
         >
-          <div
-            class="min-h-auto md:min-h-[460px] lg:min-h-[560px] flex items-center justify-end py-8 md:py-12"
+          Royal Dutch<br />
+          Medical Center
+        </h1>
+
+        <div
+          class="mt-5 inline-flex items-center gap-3 rounded-full border border-[#571248]/20 md:border-white/25 bg-[#571248]/10 md:bg-white/10 px-5 py-3 backdrop-blur-md shadow-[0_14px_34px_rgba(0,0,0,0.12)]"
+        >
+          <span
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#571248] md:bg-white text-white md:text-[#571248] text-[18px] font-bold"
           >
-            <!-- Form Box -->
-            <div
-              class="w-full fade-right md:w-[430px] lg:w-[500px] xl:w-[500px] bg-[#571248]/95 md:bg-[#571248]/60 border border-white/20 rounded-[24px] px-5 sm:px-7 lg:px-9 py-6 sm:py-7 lg:py-9 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-md"
-            >
-              <!-- Form Heading -->
-              <h2
-                class="font-heading text-white text-[20px] sm:text-[22px] lg:text-[26px] font-bold uppercase tracking-[0.3px]"
-              >
-                Book Your Consultation
-              </h2>
+            ✓
+          </span>
 
-              <div class="w-full h-[1px] bg-white/80 mt-3 mb-7"></div>
+          <p class="font-body text-[14px] lg:text-[16px] font-semibold leading-[1.35]">
+            Trusted by 500+ Customers<br />
+            in Chennai
+          </p>
+        </div>
+      </div>
 
-              <!-- Form -->
-              <form class="contactForm space-y-7">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                  <!-- Name -->
-                  <div>
-                    <label
-                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      placeholder="Enter Your Name"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
-                    />
-                  </div>
+      <!-- Form Box -->
+      <div
+        class="w-full md:w-[48%] lg:w-[500px] fade-right bg-[#571248]/95 md:bg-[#571248]/60 border border-white/20 rounded-[24px] px-5 sm:px-7 lg:px-9 py-6 sm:py-7 lg:py-9 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-md"
+      >
+        <h2
+          class="font-heading text-white text-[20px] sm:text-[22px] lg:text-[26px] font-bold uppercase tracking-[0.3px]"
+        >
+          Book Your Consultation
+        </h2>
 
-                  <!-- Phone -->
-                  <div>
-                    <label
-                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
-                    >
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      name="mobile"
-                      required
-                      inputmode="tel"
-                      pattern="^\+?[0-9\s\-]{7,20}$"
-                      placeholder="Enter Phone no"
-                      maxlength="20"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
-                    />
-                  </div>
+        <div class="w-full h-[1px] bg-white/80 mt-3 mb-7"></div>
 
-                  <!-- Service (optional) -->
-                  <div>
-                    <label
-                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
-                    >
-                      Service
-                    </label>
-                    <input
-                      type="text"
-                      name="subject"
-                      placeholder="Enter Your Service"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
-                    />
-                  </div>
+        <form class="contactForm space-y-7">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label class="font-heading block text-white text-[14px] font-bold uppercase mb-3">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Enter Your Name"
+                class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
+              />
+            </div>
 
-                  <!-- Email -->
-                  <div>
-                    <label
-                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="Enter Your Email"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
-                    />
-                  </div>
-                </div>
+            <div>
+              <label class="font-heading block text-white text-[14px] font-bold uppercase mb-3">
+                Phone
+              </label>
+              <input
+                type="tel"
+                name="mobile"
+                required
+                inputmode="tel"
+                pattern="^\+?[0-9\s\-]{7,20}$"
+                placeholder="Enter Phone no"
+                maxlength="20"
+                class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
+              />
+            </div>
 
-                <!-- Hidden message -->
-                <input type="hidden" name="message" value="Website enquiry" />
+            <div>
+              <label class="font-heading block text-white text-[14px] font-bold uppercase mb-3">
+                Service
+              </label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter Your Service"
+                class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
+              />
+            </div>
 
-                <button
-                  type="submit"
-                  class="w-full sm:w-[190px] h-[42px] rounded-full border border-white/20 bg-white/5 text-white"
-                >
-                  Submit
-                </button>
-              </form>
+            <div>
+              <label class="font-heading block text-white text-[14px] font-bold uppercase mb-3">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Enter Your Email"
+                class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
+              />
             </div>
           </div>
-        </div>
-      </section>
+
+          <input type="hidden" name="message" value="Website enquiry" />
+
+          <button
+            type="submit"
+            class="w-full sm:w-[190px] h-[42px] rounded-full border border-white/20 bg-white/5 text-white"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- ================= NATURAL TREATMENTS SECTION ================= -->
       <section class="w-full bg-white py-14 sm:py-16 lg:py-14 overflow-hidden">

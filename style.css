@@ -635,7 +635,15 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+@media (max-width: 767px) {
+  #book-now .fade-right {
+    transform: translateY(24px);
+  }
 
+  #book-now .fade-right.show-animation {
+    transform: translate(0, 0);
+  }
+}
  #toastBox .toast {
   min-width: 260px;
   padding: 14px 18px;
