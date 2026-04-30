@@ -632,3 +632,44 @@ h1, h2, h3, h4, h5, h6,
     transform: translateX(28px);
   }
 }
+
+
+
+
+ #toastBox .toast {
+  min-width: 260px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: toastSlideIn 0.4s ease, toastFadeOut 0.5s ease 2.6s forwards;
+}
+
+#toastBox .toast-success {
+  background: linear-gradient(135deg, #00c853, #64dd17);
+}
+
+#toastBox .toast-error {
+  background: linear-gradient(135deg, #ff1744, #ff5252);
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastFadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

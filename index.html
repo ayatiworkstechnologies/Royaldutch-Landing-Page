@@ -15,9 +15,8 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+
     <!-- swiper -->
     <!-- Swiper CSS -->
     <link
@@ -93,69 +92,79 @@
               <div class="w-full h-[1px] bg-white/80 mt-3 mb-7"></div>
 
               <!-- Form -->
-              <form class="space-y-7">
+              <form class="contactForm space-y-7">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                   <!-- Name -->
                   <div>
                     <label
-                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
                     >
                       Name
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      required
                       placeholder="Enter Your Name"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
                     />
                   </div>
 
                   <!-- Phone -->
                   <div>
                     <label
-                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
                     >
                       Phone
                     </label>
                     <input
                       type="tel"
+                      name="mobile"
+                      required
+                      pattern="[0-9]{10}"
                       placeholder="Enter Your Phone No"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
                     />
                   </div>
 
-                  <!-- Service -->
+                  <!-- Service (optional) -->
                   <div>
                     <label
-                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
                     >
                       Service
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       placeholder="Enter Your Service"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
                     />
                   </div>
 
                   <!-- Email -->
                   <div>
                     <label
-                      class="font-heading block text-white text-[14px] sm:text-[15px] font-bold uppercase mb-3"
+                      class="font-heading block text-white text-[14px] font-bold uppercase mb-3"
                     >
                       Email
                     </label>
                     <input
                       type="email"
+                      name="email"
+                      required
                       placeholder="Enter Your Email"
-                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white placeholder:text-white/60 placeholder:uppercase placeholder:text-[11px] sm:placeholder:text-[12px] text-[13px] outline-none focus:border-white/70 transition"
+                      class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
                     />
                   </div>
                 </div>
 
-                <!-- Submit -->
+                <!-- Hidden message -->
+                <input type="hidden" name="message" value="Website enquiry" />
+
                 <button
                   type="submit"
-                  class="w-full sm:w-[190px] h-[42px] rounded-full border border-white/20 bg-white/5 text-white text-[13px] font-bold uppercase tracking-[1px] transition-all duration-300 hover:bg-white hover:text-[#571248]"
+                  class="w-full sm:w-[190px] h-[42px] rounded-full border border-white/20 bg-white/5 text-white"
                 >
                   Submit
                 </button>
@@ -217,7 +226,7 @@
                   <p
                     class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
                   >
-                    Organic Modern Treatments
+                    Precision-driven care for lasting skin health
                   </p>
                 </div>
               </div>
@@ -248,7 +257,7 @@
                   <p
                     class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
                   >
-                    Organic Modern Treatments
+                    Clean, conscious treatments your skin can trust
                   </p>
                 </div>
               </div>
@@ -279,7 +288,7 @@
                   <p
                     class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
                   >
-                    Organic Modern Treatments
+                    Nature-powered solutions with proven efficacy
                   </p>
                 </div>
               </div>
@@ -310,7 +319,7 @@
                   <p
                     class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
                   >
-                    Organic Modern Treatments
+                    Balanced treatments with uncompromised safety
                   </p>
                 </div>
               </div>
@@ -394,7 +403,7 @@
                       alt="Facials Hydrofacial"
                       class="rd-simple-icon-img"
                     />
-                    <h3>Facials <br />(Hydrofacial)</h3>
+                    <h3>Facials <br />(Hydrafacial)</h3>
                     <p>Skin-cleansing and hydrating treatments.</p>
                   </div>
                 </div>
@@ -608,13 +617,13 @@
             <p
               class="max-w-[560px] fade-down font-['Montserrat'] text-[13.5px] font-medium leading-[1.75] text-[#333333] sm:text-[15px] lg:text-[16px] lg:font-semibold"
             >
-              Established in Ras Al Khaimah, United Arab Emirates, Royal Dutch
-              Clinic has earned a reputation as a premier destination for
-              advanced dermatology and aesthetic medicine. Founded by seasoned
-              Dutch professionals with a vision to redefine clinical care
-              through European precision and innovation, Royal Dutch Clinic has
-              grown into a trusted brand that delivers personalized beauty and
-              wellness solutions with uncompromising quality.
+              Established in Ras Al-Khaimah, United Arab Emirates, Royal Dutch
+              Medical centre has earned a reputation as a premier destination
+              for advanced dermatology and aesthetic medicine. Founded by
+              seasoned Dutch professionals with a vision to redefine clinical
+              care through European precision and innovation, Royal Dutch Clinic
+              has grown into a trusted brand that delivers personalized beauty
+              and wellness solutions with uncompromising quality.
             </p>
 
             <a
@@ -750,7 +759,7 @@
                 </h2>
 
                 <!-- Form -->
-                <form class="mt-8 space-y-6">
+                <form class="contactForm mt-8 space-y-6">
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-6">
                     <!-- Name -->
                     <div>
@@ -761,8 +770,10 @@
                       </label>
                       <input
                         type="text"
+                        name="name"
+                        required
                         placeholder="Enter Your Name"
-                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222]"
                       />
                     </div>
 
@@ -775,12 +786,15 @@
                       </label>
                       <input
                         type="tel"
+                        name="mobile"
+                        required
+                        pattern="[0-9]{10}"
                         placeholder="Enter Your Phone No"
-                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222]"
                       />
                     </div>
 
-                    <!-- Service -->
+                    <!-- Service (optional) -->
                     <div>
                       <label
                         class="block font-['Cinzel'] text-[#1f1f1f] text-[14px] font-bold uppercase mb-2"
@@ -789,8 +803,9 @@
                       </label>
                       <input
                         type="text"
+                        name="subject"
                         placeholder="Enter Your Service"
-                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222]"
                       />
                     </div>
 
@@ -803,11 +818,16 @@
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        required
                         placeholder="Enter Your Email"
-                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222] placeholder:text-[#333]/80 placeholder:uppercase placeholder:text-[11px] outline-none transition-all duration-300 focus:border-[#571248] focus:ring-2 focus:ring-[#571248]/10"
+                        class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222]"
                       />
                     </div>
                   </div>
+
+                  <!-- Hidden message -->
+                  <input type="hidden" name="message" value="Website enquiry" />
 
                   <!-- Submit -->
                   <button
@@ -822,6 +842,20 @@
           </div>
         </div>
       </section>
+
+      <!-- Toast Container -->
+      <div
+        id="toastBox"
+        style="
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 99999;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        "
+      ></div>
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -833,7 +867,7 @@
           <p
             class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
           >
-            © Copyright Royaldutch Medical Centre 2025
+            © Copyright Royaldutch Medical Centre 2026
           </p>
 
           <span
@@ -850,14 +884,81 @@
             class="hidden md:block h-8 w-[1px] bg-white/25 mx-4 lg:mx-6"
           ></span>
 
-          <p
-            class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
+          <a
+            href="https://www.ayatiworks.com/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Designed and Developed by Ayati Works
-          </p>
+            <p
+              class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
+            >
+              Designed and Developed by Ayati Works
+            </p>
+          </a>
         </div>
       </div>
     </footer>
+
+    <!-- Script Section  -->
+    <!-- Form script -->
+    <script>
+      function showToast(message, type = "success") {
+        const box = document.getElementById("toastBox");
+        if (!box) return alert(message);
+
+        const toast = document.createElement("div");
+        toast.className = `toast toast-${type}`;
+        toast.innerText = message;
+
+        box.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+      }
+
+      // 🔥 Use event delegation (BEST FIX)
+      document.addEventListener("submit", async function (e) {
+        const form = e.target;
+
+        // only target our forms
+        if (!form.classList.contains("contactForm")) return;
+
+        e.preventDefault();
+
+        const btn = form.querySelector("button");
+        const originalText = btn.innerText;
+
+        const formData = new FormData(form);
+
+        if (!formData.get("subject")) {
+          formData.set("subject", "General Enquiry");
+        }
+
+        btn.disabled = true;
+        btn.innerText = "Submitting...";
+
+        try {
+          const res = await fetch("enquiry-form.php", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await res.json();
+
+          showToast(
+            data.message,
+            data.status === "error" ? "error" : "success",
+          );
+
+          if (data.status === "success") {
+            form.reset();
+          }
+        } catch (err) {
+          showToast("Something went wrong", "error");
+        }
+
+        btn.disabled = false;
+        btn.innerText = originalText;
+      });
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
