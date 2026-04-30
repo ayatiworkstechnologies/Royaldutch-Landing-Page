@@ -29,10 +29,18 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-if (!preg_match('/^[0-9]{10}$/', $mobile)) {
-    echo json_encode(['status'=>'error','message'=>'Phone must be 10 digits']);
+/* Dubai + International phone support */
+$cleanMobile = preg_replace('/[\s\-\(\)]/', '', $mobile);
+
+if (!preg_match('/^\+?[0-9]{7,15}$/', $cleanMobile)) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Please enter a valid phone number'
+    ]);
     exit;
 }
+
+$mobile = $cleanMobile;
 
 /* ---------- FALLBACK ---------- */
 $subject = $subject ?: 'General Enquiry';

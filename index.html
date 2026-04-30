@@ -121,8 +121,10 @@
                       type="tel"
                       name="mobile"
                       required
-                      pattern="[0-9]{10}"
-                      placeholder="Enter Your Phone No"
+                      inputmode="tel"
+                      pattern="^\+?[0-9\s\-]{7,20}$"
+                      placeholder="Enter Phone no"
+                      maxlength="20"
                       class="w-full h-[42px] rounded-full border border-white/20 bg-transparent px-5 text-white"
                     />
                   </div>
@@ -314,7 +316,7 @@
                   <h3
                     class="font-body text-[#2b2b2b] text-[23px] sm:text-[26px] font-medium leading-tight"
                   >
-                    No Side Affects
+                    No Side Effects
                   </h3>
                   <p
                     class="font-body text-[#777777] text-[17px] sm:text-[19px] mt-4"
@@ -594,7 +596,7 @@
           class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-7 px-4 sm:px-6 md:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-8"
         >
           <!-- Left Image -->
-          <div class="w-full overflow-hidden">
+          <div class="w-full fade-up overflow-hidden">
             <img
               src="images/clinic-interior.jpg"
               alt="Royal Dutch Clinic Interior"
@@ -788,8 +790,10 @@
                         type="tel"
                         name="mobile"
                         required
-                        pattern="[0-9]{10}"
-                        placeholder="Enter Your Phone No"
+                        inputmode="tel"
+                        pattern="^\+?[0-9\s\-]{7,20}$"
+                        placeholder="Enter Phone no"
+                        maxlength="20"
                         class="w-full h-[38px] rounded-full border border-[#dddddd] bg-white px-4 font-['Montserrat'] text-[12px] font-semibold text-[#222]"
                       />
                     </div>
@@ -842,6 +846,25 @@
           </div>
         </div>
       </section>
+
+      <!-- WhatsApp Floating Icon -->
+      <a
+        href="https://wa.me/971509479001"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        class="fixed bottom-5 right-5 z-[99999] w-[56px] h-[56px] rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_12px_30px_rgba(37,211,102,0.45)] transition-all duration-300 hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          class="w-[30px] h-[30px] fill-white"
+        >
+          <path
+            d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.29.6 4.52 1.74 6.49L3 29l6.66-1.74A12.9 12.9 0 0 0 16.04 29C23.22 29 29 23.18 29 16S23.22 3 16.04 3zm0 23.8c-2.04 0-4.03-.55-5.77-1.59l-.41-.24-3.95 1.03 1.05-3.85-.27-.43A10.73 10.73 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8S26.84 10.05 26.84 16s-4.85 10.8-10.8 10.8zm5.94-8.09c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.58-1.59-.95-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.57-.08-.16-.72-1.74-.99-2.39-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.57.08-.86.4-.29.32-1.13 1.1-1.13 2.68s1.16 3.12 1.32 3.33c.16.21 2.29 3.49 5.55 4.89.78.34 1.38.54 1.85.69.78.25 1.49.21 2.05.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"
+          />
+        </svg>
+      </a>
 
       <!-- Toast Container -->
       <div
@@ -914,11 +937,9 @@
         setTimeout(() => toast.remove(), 3000);
       }
 
-      // 🔥 Use event delegation (BEST FIX)
       document.addEventListener("submit", async function (e) {
         const form = e.target;
 
-        // only target our forms
         if (!form.classList.contains("contactForm")) return;
 
         e.preventDefault();
@@ -927,6 +948,21 @@
         const originalText = btn.innerText;
 
         const formData = new FormData(form);
+
+        const phoneInput = form.querySelector('input[name="mobile"]');
+        const phoneValue = phoneInput.value.trim();
+
+        const cleanPhone = phoneValue.replace(/[\s\-()]/g, "");
+
+        const internationalPhoneRegex = /^\+?[0-9]{7,15}$/;
+
+        if (!internationalPhoneRegex.test(cleanPhone)) {
+          showToast("Please enter a valid phone number", "error");
+          phoneInput.focus();
+          return;
+        }
+
+        formData.set("mobile", cleanPhone);
 
         if (!formData.get("subject")) {
           formData.set("subject", "General Enquiry");

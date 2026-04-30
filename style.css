@@ -617,23 +617,23 @@ h1, h2, h3, h4, h5, h6,
 /* Mobile smooth adjustment */
 @media (max-width: 768px) {
   .fade-up {
-    transform: translateY(28px);
+    transform: translateY(24px);
   }
 
   .fade-down {
-    transform: translateY(-28px);
+    transform: translateY(-24px);
   }
 
-  .fade-left {
-    transform: translateX(-28px);
-  }
-
+  .fade-left,
   .fade-right {
-    transform: translateX(28px);
+    transform: translateY(24px);
+  }
+
+  .show-animation {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
-
-
 
 
  #toastBox .toast {
