@@ -88,23 +88,6 @@
                 Royal Dutch<br />
                 Medical Center
               </h1>
-
-              <div
-                class="mt-5 inline-flex items-center gap-3 rounded-full border border-[#571248]/20 md:border-white/25 bg-[#571248]/10 md:bg-white/10 px-5 py-3 backdrop-blur-md shadow-[0_14px_34px_rgba(0,0,0,0.12)]"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-full bg-[#571248] md:bg-white text-white md:text-[#571248] text-[18px] font-bold"
-                >
-                  ✓
-                </span>
-
-                <p
-                  class="font-body text-[14px] lg:text-[16px] font-semibold leading-[1.35]"
-                >
-                  Trusted by 500+ Customers<br />
-                  in Chennai
-                </p>
-              </div>
             </div>
 
             <!-- Form Box -->
@@ -990,7 +973,7 @@
           <p
             class="font-heading text-[11px] sm:text-[13px] text-white/90 tracking-[0.3px] px-4"
           >
-            © Copyright Royaldutch Medical Centre 2026
+            © Copyright Royal dutch Medical Centre 2026
           </p>
 
           <span
@@ -1099,110 +1082,86 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Swiper(".rdFacialSwiper", {
-          loop: true,
-          speed: 700,
-          spaceBetween: 24,
-          grabCursor: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-          pagination: {
-            el: ".rd-facial-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".rd-facial-next",
-            prevEl: ".rd-facial-prev",
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
-            641: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1025: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
-          },
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    function initSwiper(swiperClass, paginationClass, nextClass, prevClass) {
+      const swiperEl = document.querySelector(swiperClass);
 
-        new Swiper(".rdLaserSwiper", {
-          loop: true,
-          speed: 700,
-          spaceBetween: 24,
-          grabCursor: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-          pagination: {
-            el: ".rd-laser-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".rd-laser-next",
-            prevEl: ".rd-laser-prev",
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
-            641: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1025: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
-          },
-        });
+      if (!swiperEl) return;
 
-        new Swiper(".rdFatSwiper", {
-          loop: true,
-          speed: 700,
-          spaceBetween: 24,
-          grabCursor: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+      const slides = swiperEl.querySelectorAll(".swiper-slide");
+      const hasMultipleSlides = slides.length > 1;
+
+      if (swiperEl.swiper) {
+        swiperEl.swiper.destroy(true, true);
+      }
+
+      new Swiper(swiperClass, {
+        loop: hasMultipleSlides,
+        speed: 1100,
+        spaceBetween: 24,
+        grabCursor: hasMultipleSlides,
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+        effect: "slide",
+
+        autoplay: hasMultipleSlides
+          ? {
+              delay: 2200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }
+          : false,
+
+        pagination: {
+          el: paginationClass,
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: nextClass,
+          prevEl: prevClass,
+        },
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
           },
-          pagination: {
-            el: ".rd-fat-pagination",
-            clickable: true,
+          641: {
+            slidesPerView: 2,
+            spaceBetween: 20,
           },
-          navigation: {
-            nextEl: ".rd-fat-next",
-            prevEl: ".rd-fat-prev",
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: 24,
           },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
-            641: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1025: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
-          },
-        });
+        },
       });
-    </script>
+    }
+
+    initSwiper(
+      ".rdFacialSwiper",
+      ".rd-facial-pagination",
+      ".rd-facial-next",
+      ".rd-facial-prev"
+    );
+
+    initSwiper(
+      ".rdLaserSwiper",
+      ".rd-laser-pagination",
+      ".rd-laser-next",
+      ".rd-laser-prev"
+    );
+
+    initSwiper(
+      ".rdFatSwiper",
+      ".rd-fat-pagination",
+      ".rd-fat-next",
+      ".rd-fat-prev"
+    );
+  });
+</script>
 
     <!-- Testimonial js -->
     <script>

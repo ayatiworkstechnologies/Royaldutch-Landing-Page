@@ -182,7 +182,7 @@ try {
 
               <tr>
                 <td align='center' style='background:#fafafa; padding:18px 20px; color:#777777; font-size:12px; line-height:1.5;'>
-                  © 2026 Royal Dutch Medical Centre<br>All rights Reserved
+                  &copy; 2026 Royal Dutch Medical Centre<br>All rights Reserved
                 </td>
               </tr>
 
